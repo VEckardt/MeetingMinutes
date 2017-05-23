@@ -1,4 +1,4 @@
-# Meeting Minutes for PTC Integrity
+# Meeting Minutes for PTC Integrity (Demo Case only)
 Demo case how to use RESTeasy together with PTC Integrity for Meeting Minutes
 
 If you are interested in "Meeting Minutes" and / or "RESTful services" in Integrity LM, read on ...
