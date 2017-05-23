@@ -3,7 +3,7 @@ Demo case how to use RESTeasy together with PTC Integrity for Meeting Minutes
 
 If you are interested in "Meeting Minutes" and / or "RESTful services" in Integrity LM, read on ...
 
-At PTC Consulting, we usually analyze different solution alternatives for our customers. During such an evaluation project, we analyzed the possibility of interacting with RESTful Services. As an outcome, a library was created that communicates with Integrity in order to obtain items and to create simple documents. (Since Integrity LM 10.9 and also in 11.1 we have included RESTeasy as one of the well-known RESTful implementations.)
+At PTC Consulting, we usually analyze different solution alternatives for our customers. During such an evaluation project, we analyzed the possibility of interacting with RESTful Services. As an outcome, a library was created that communicates with Integrity in order to obtain items and to create simple documents. (Since Integrity LM 10.9 and still also in 11.1 we have included RESTeasy (http://resteasy.jboss.org) as one of the well-known RESTful implementations.)
 
 I was then looking for a good example and reminded me of my interest to go away from Excel and Word Meeting Minutes. So I implemented a simple "Meeting Minutes Application" on top of the RESTeasy libs.
 
