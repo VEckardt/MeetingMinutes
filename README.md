@@ -1,6 +1,8 @@
 # Meeting Minutes for PTC Integrity (Demo Case only)
 Demo case how to use RESTeasy together with PTC Integrity for Meeting Minutes
 
+### How do you manage Meeting Minutes today?
+
 If you are interested in "Meeting Minutes" and / or "RESTful services" in Integrity LM, read on ...
 
 At PTC Consulting, we usually analyze different solution alternatives for our customers. During such an evaluation project, we analyzed the possibility of interacting with RESTful Services. As an outcome, a library was created that communicates with Integrity in order to obtain items and to create simple documents. (Since Integrity LM 10.9 and still also in 11.1 we have included RESTeasy (http://resteasy.jboss.org) as one of the well-known RESTful implementations.)
@@ -65,7 +67,37 @@ I can think of the following improvements:
  
 If you are interested in the implementation of such features and want to contribute, please also let me know.
  
-Looking forward to your interest, comments and feedback.
- 
- 
-### How do you manage Meeting Minutes today?
+##  Development environment
+- PTC Integrity LM 10.9 (also 11.0 should be fine)
+- Netbeans 7.4 (or 8)
+- Java 1.7 (or 1.8)
+- to be able to deploy directly into Integrity Server, I have installed a 5.4 JBoss server locally (Integrity uses an older one), and configured NetBeans with that once
+
+## To check
+- MeetingMinutes.js for login
+- MeetingMinutes.js for REST server call (server name)
+
+## Deployment
+- the netbeans configuration section will automatically copy the "war" to my local server for testing
+- if you don't have a local server, then copy the "war" into the server's \server\mks\deploy directory manually
+
+## Package / File overview
+- MeetingMinutes.jsp - main file
+- MeetingMinutes.js - related JavaScript
+- MeetingOverview.jsp - under Construction
+- css/MeetingMinutes.css - related css file 
+- js/ - jQuery and Converter Files
+- images - some images
+- com.ptc.service.mms - helper files
+- com.ptc.service.mms.api - Integrity Server Connection (to get the pick list values the easy way)
+
+## Autorization
+- Is the "Basic"
+- OAuth2 was also considered but is not implemented yet
+
+## Tested with
+- Chrome
+- Firefox
+
+## Inside the files
+- you will see some references to web pages that I have used as input
