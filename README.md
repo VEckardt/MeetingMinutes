@@ -51,6 +51,7 @@ Please do not expect a feature rich implementation.
  
 I can think of the following improvements:
 
+- Dedicated login form
 - Meeting Minutes overview and serach capabilities
 - Load of existing Meeting Minutes into this form
 - New Fields "State" and "Description" on Header, "State" on node
@@ -67,4 +68,4 @@ If you are interested in the implementation of such features and want to contrib
 Looking forward to your interest, comments and feedback.
  
  
-### How do you manage Meeting Minutes in your group today?
+### How do you manage Meeting Minutes today?
