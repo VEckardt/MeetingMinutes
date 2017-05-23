@@ -41,16 +41,17 @@ Review and install the MeetingMinutes war file on server.
 Please do not expect a feature rich implementation.
  
 I can think of the following improvements:
-Meeting Minutes overview and serach capabilities
-Load of existing Meeting Minutes into this form
-New Fields "State" and "Description" on Header, "State" on node
-New Pick list for the target project.
-New Multi Pick List for the attendees
-Automatic e-mails to the attendees when state changed to "Delivered" (Integrity Trigger)
-Automatic task creation when category is task (Integrity Trigger)
-Automatic PDF generation on server
-Additional Comments for each node
-etc etc.
+
+- Meeting Minutes overview and serach capabilities
+- Load of existing Meeting Minutes into this form
+- New Fields "State" and "Description" on Header, "State" on node
+- New Pick list for the target project.
+- New Multi Pick List for the attendees
+- Automatic e-mails to the attendees when state changed to "Delivered" (Integrity Trigger)
+- Automatic task creation when category is task (Integrity Trigger)
+- Automatic PDF generation on server
+- Additional Comments for each node
+- etc etc.
  
 If you are interested in the implementation of such features and want to contribute, please also let me know.
  
