@@ -20,7 +20,8 @@ It is NOT a supported PTC solution!
 
 ## Here are some details:
 The Meeting Minutes form:
-> MeetingMinutes1_EmptyForm.PNG
+![alt text](https://github.com/VEckardt/MeetingMinutes/doc/MeetingMinutes1_EmptyForm.PNG)
+
 The JavaScript for the REST call:
 > MeetingMinutes1_JSCode.PNG
 The Java REST consumer:
