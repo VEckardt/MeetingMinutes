@@ -54,7 +54,7 @@ Please do not expect a feature rich implementation.
 I can think of the following improvements:
 
 - Dedicated login form
-- Meeting Minutes overview and serach capabilities
+- Meeting Minutes overview and search capabilities
 - Load of existing Meeting Minutes into this form
 - New Fields "State" and "Description" on Header, "State" on node
 - New Pick list for the target project.
