@@ -10,36 +10,43 @@ I was then looking for a good example and reminded me of my interest to go away 
 I am happy to share this with interested people in the state as it is now.
  
 ## Please note:
-It was only created for demo purposes
-It runs on a separate Integrity project server (not on the PROD!)
-It meets the minimal requirements for a Meeting Minutes app.
-It uses RESTeasy, jQuery, and Java ServerPages
-It offers REST Basic Authentication
-It uses the server side API connection to communicate with Integrity
-It is NOT a supported PTC solution!
+
+- It was only created for demo purposes
+- It runs on a separate Integrity project server (not on the PROD!)
+- It meets the minimal requirements for a Meeting Minutes app.
+- It uses RESTeasy, jQuery, and Java ServerPages
+- It offers REST Basic Authentication
+- It uses the server side API connection to communicate with Integrity
+- It is NOT a supported PTC solution!
 
 ## Here are some details:
 The Meeting Minutes form:
 
-![alt text](doc/MeetingMinutes1_EmptyForm.PNG)
+![Empty Start Form](doc/MeetingMinutes1_EmptyForm.PNG)
 
 The JavaScript for the REST call:
-> MeetingMinutes1_JSCode.PNG
+
+![JS Code](doc/MeetingMinutes1_JSCode.PNG)
+
 The Java REST consumer:
-> MeetingMinutes1_RSCode.PNG
+
+![REST Code](doc/MeetingMinutes1_RSCode.PNG)
 
 An example after submitting the Meeting Minutes into Integrity:
 
-> MeetingMinutes1.PNG
-> MeetingMinutes1_Result.PNG
+![Minutes Entered](doc/MeetingMinutes1.PNG)
+
+![Final Result](doc/MeetingMinutes1_Result.PNG)
  
-## Installation steps (overview):
-Configure a Meeting Minutes Document in Integrity (3 Types, Categories, Fields etc.)
-Configure a User Group
-Review and install the IntegrityREST war file on server
-Review and install the MeetingMinutes war file on server.
+## Installation steps (overview)
+
+- Configure a Meeting Minutes Document in Integrity (3 Types, Categories, Fields etc.)
+- Configure a User Group
+- Review and install the IntegrityREST war file on server
+- Review and install the MeetingMinutes war file on server.
  
-## Possible Improvements:
+## Possible Improvements
+
 Please do not expect a feature rich implementation.
  
 I can think of the following improvements:
