@@ -21,7 +21,7 @@ It is NOT a supported PTC solution!
 ## Here are some details:
 The Meeting Minutes form:
 
-![alt text](http://github.com/VEckardt/MeetingMinutes/doc/MeetingMinutes1_EmptyForm.PNG)
+![alt text](doc/MeetingMinutes1_EmptyForm.PNG)
 
 The JavaScript for the REST call:
 > MeetingMinutes1_JSCode.PNG
