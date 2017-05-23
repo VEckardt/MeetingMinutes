@@ -1,0 +1,93 @@
+/* 
+body,html{font-family:'Droid Sans',sans-serif;font-size:14px;background-color:#ffffff;color:#000000;}
+*/
+
+.democlass{
+    color:red;
+}
+html {
+    font-size: 80%;
+}
+table#headerTable,
+table#dataTable
+{
+    border: none !important;
+}
+table#dataTable tr th {text-align:left; font-size: 14px;}
+table#headerTable tr td {
+    font-size: 12px;
+}
+
+/*
+input[readonly="readonly"] {
+*/
+input[readonly="readonly"] {
+    border:0px;
+}
+input, textarea, select
+{
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border:solid 1px lightgray;
+    padding:2px;
+}
+input#deletenode:hover {
+    background-color :#ff3300; /* the background a little darker*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75); /* drop shadow is narrower to give a pushed effect */
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+input#submitbutton, input#submitbutton:focus, input#addnote, input#addnote:focus, input#deletenode, input#deletenode:focus  {
+    border:1px solid #007aa7; /*border color dark blue */
+    background:#0090c6; /*the color of the button is blue */
+    padding:5px 15px; /*add padding inside of the button*/
+    -moz-border-radius: 5px; /* add rounded corners */
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75); /* add drop shadows */
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    color:#f3f3f3; /* text color is white */
+    /* font-size:1em; /* font size is 1em */
+    cursor:pointer; /* change cursor when hover */
+}
+input#submitbutton:hover, input#addnote:hover {
+    background-color :#00aeef; /* the background a little darker*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75); /* drop shadow is narrower to give a pushed effect */
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+}
+
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background: #0099cc;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+/* 
+body {
+     border-left: 10px solid #900;
+     border-right: 10px solid #900;
+}
+*/
+
+@media
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+
+{
+    body { border: 0; }
+    body:before, body:after { display: none; }
+}
