@@ -33,6 +33,7 @@ public class JSONtoHTML {
         JSONArray jsonArr = new JSONArray();
 
         jsonObj.put("Name", "eBay");
+        jsonObj.put("Name", "eBay");
         jsonObj.put("Phone", "123-123-1234");
         jsonObj.put("Address", "Bay Area");
 

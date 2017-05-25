@@ -125,6 +125,111 @@ function jsonEscape(str) {
             .replace(/[\t]/g, '\\t');
 }
 
+
+//The alternative would be to convert the html table to a field-value-pair structure like this:
+//[{"name":"summary","value":""},
+// {"name":"attendees","value":""},
+// {"name":"assignedUser","value":"executive"},
+// {"name":"project","value":"/Projects"},
+// {"name":"textkey","value":""},
+// {"name":"category","value":"Entry"},
+// {"name":"text","value":""},
+// {"name":"action","value":""},
+// {"name":"assignee","value":"executive"},
+// {"name":"targetdate","value":""},
+// {"name":"nodeid","value":"24547"},
+// {"name":"textkey","value":""},
+// {"name":"category","value":"ToDo"},
+// {"name":"text","value":""},
+// {"name":"action","value":""},
+// {"name":"assignee","value":"veckardt"},
+// {"name":"targetdate","value":""}]
+
+//
+//[{"id": "100"}, {"values": [{
+//				"name": "summary",
+//				"value": ""
+//			},
+//			{
+//				"name": "attendees",
+//				"value": ""
+//			},
+//			{
+//				"name": "assignedUser",
+//				"value": "executive"
+//			},
+//			{
+//				"name": "project",
+//				"value": "/Projects"
+//			}
+//		]},
+//	{
+//		"nodelist": [
+//
+//			{
+//				"values": [{
+//						"name": "textkey",
+//						"value": ""
+//					},
+//					{
+//						"name": "category",
+//						"value": "Entry"
+//					},
+//					{
+//						"name": "text",
+//						"value": ""
+//					},
+//					{
+//						"name": "action",
+//						"value": ""
+//					},
+//					{
+//						"name": "assignee",
+//						"value": "executive"
+//					},
+//					{
+//						"name": "targetdate",
+//						"value": ""
+//					},
+//					{
+//						"name": "nodeid",
+//						"value": "24547"
+//					}
+//				]
+//			},
+//			{
+//				"values": [{
+//						"name": "textkey",
+//						"value": ""
+//					},
+//					{
+//						"name": "category",
+//						"value": "ToDo"
+//					},
+//					{
+//						"name": "text",
+//						"value": ""
+//					},
+//					{
+//						"name": "action",
+//						"value": ""
+//					},
+//					{
+//						"name": "assignee",
+//						"value": "veckardt"
+//					},
+//					{
+//						"name": "targetdate",
+//						"value": ""
+//					}
+//				]
+//			}
+//		]
+//	}
+//]        
+        
+
+
 function convertTable(tableID)
 {
     // var table = document.getElementById(tableID);
@@ -132,9 +237,16 @@ function convertTable(tableID)
     document.getElementById("result").innerHTML = "";
 
     var table = $("#body").find('input,select,textarea,div').serializeArray();
-    // var formdata = JSON.stringify(table);
-    // console.log("Form Data before:");
-    // console.log(formdata);
+
+    var formdata = JSON.stringify(table);
+    console.log("Form Data before:");
+    console.log(formdata);
+
+    // add the ID at first 
+//    formdata = formdata.replace("[{", "[{\"name\":\"id\",\"value\":\"" + document.getElementById("id").innerHTML + "\"},{");
+//    formdata = formdata.replace(",{\"name\":\"textkey\"",  ",\"nodelist\" : [{\"name\":\"textkey\"");
+//    formdata = formdata + "}]";
+
     var formdata = "{\"id\":\"" + document.getElementById("id").innerHTML + "\",";
     var i = 0;
     $.each(table, function() {
@@ -151,9 +263,12 @@ function convertTable(tableID)
         formdata = formdata + "\"" + this.name + "\":\"" + jsonEscape(this.value) + "\"";
     });
     formdata = formdata + "}]}";
-    console.log("Form Data: " + formdata);
+//    console.log("Form Data: " + formdata);
     // JSON.parse(JSON.stringify(jsonObject));
     // formdate = JSON.stringify(formdata);
+    console.log("Form Data after:");
+    console.log(formdata);
+
     JSON.parse(formdata);
     document.body.style.cursor = "wait";
     window.setTimeout(function() {
@@ -178,10 +293,11 @@ function convertTable(tableID)
                 xhr.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
             },
             success: function(data, txtStatus, xhr) {
-                console.log("Return: " + data);
+                // console.log("Return: " + JSONtoTABLE(data, ""));
                 console.log("Status: " + xhr.status);
                 document.getElementById("result").innerHTML = "<h4>Result:</h4>Meeting Minutes with ID " + data.id + " and " + (data.nodelist.length) + " Notes created/updated." + "<br><br>Status: " + xhr.status;
                 updateNodeIDs(data);
+                console.log("Result data: " + data);
                 document.getElementById("id").innerHTML = data.id;
             },
             error: function(data, txtStatus, xhr) {

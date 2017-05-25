@@ -26,6 +26,7 @@ package org.json;
 import java.io.IOException;
 import java.io.Writer;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.HashMap;
@@ -276,9 +277,9 @@ public class JSONObject {
                         key = key.substring(0, 1).toLowerCase()
                                 + key.substring(1);
                     }
-                    this.put(key, method.invoke(bean, null));
+                    this.put(key, method.invoke(bean, (Object[]) null));
                 }
-            } catch (Exception e) {
+            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | JSONException e) {
                 /* forget about it */
             }
         }
