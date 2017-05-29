@@ -43,7 +43,7 @@ An example after submitting the Meeting Minutes into Integrity:
 ## Installation steps (overview)
 
 - Configure a Meeting Minutes Document in Integrity (3 Types, Categories, Fields etc.)
-- Configure a User Group
+- Configure a User Group "Meeting Minutes"
 - Review and install the IntegrityREST war file on server
 - Review and install the MeetingMinutes war file on server.
  
@@ -54,14 +54,14 @@ Please do not expect a feature rich implementation.
 I can think of the following improvements:
 
 - Dedicated login form
-- Meeting Minutes overview and search capabilities
-- Load of existing Meeting Minutes into this form
+- Meeting Minutes overview and search capabilities (draft Version available)
+- Load of existing Meeting Minutes into this form (draft Version available)
 - New Fields "State" and "Description" on Header, "State" on node
 - New Pick list for the target project.
 - New Multi Pick List for the attendees
 - Automatic e-mails to the attendees when state changed to "Delivered" (Integrity Trigger)
 - Automatic task creation when category is task (Integrity Trigger)
-- Automatic PDF generation on server
+- Automatic PDF generation on server for extended emailing
 - Additional Comments for each node
 - etc etc.
  
@@ -74,7 +74,7 @@ If you are interested in the implementation of such features and want to contrib
 - to be able to deploy directly into Integrity Server, I have installed a 5.4 JBoss server locally (Integrity uses an older one), and configured NetBeans with that once
 
 ## To check
-- MeetingMinutes.js for login
+- MeetingMinutes.js for (local) login
 - MeetingMinutes.js for REST server call (server name)
 
 ## Deployment
